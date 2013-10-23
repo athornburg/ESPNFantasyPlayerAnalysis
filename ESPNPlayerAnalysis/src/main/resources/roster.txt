@@ -1,0 +1,14 @@
+PG	Deron Williams*, Bkn PG
+SG	Wilson Chandler, Den SF, SG
+SF	Thaddeus Young, Phi SF
+PF	Ryan Anderson, Nor PF
+C	Marc Gasol, Mem C
+G	Brandon Jennings*, Det PG
+F	Kevin Garnett, Bkn PF
+UTIL	Mike Conley, Mem PG
+UTIL	Steve Nash, LAL PG
+Bench	Gerald Wallace, Bos SF
+Bench	Markieff Morris, Pho
+Bench	J.J. Redick, LAC SG
+Bench	Carlos Delfino*, Mil SF
+Bench	Brandan Wright*, Dal PF, C
