@@ -18,7 +18,7 @@ public class RosterPopulator {
 
     public Map getRosterMap(){
         InjuryChecker checker = new InjuryChecker();
-        checker.setKey("ADD API KEY");
+        checker.setKey("PUT KEY HERE");
         checker.setUrl("http://api.espn.com/v1/sports/basketball/nba/athletes?apikey=");
         for (int offset = 1; offset < 650; offset = offset + 50) {
             try {
