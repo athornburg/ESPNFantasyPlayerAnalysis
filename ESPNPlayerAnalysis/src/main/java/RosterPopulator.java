@@ -17,18 +17,17 @@ public class RosterPopulator {
     }
 
     public Map getRosterMap(){
-        InjuryChecker checker = new InjuryChecker("Deron","Williams");
-        checker.setKey("f64x7ykwpmch2qnnk2rhbwwh");
+        InjuryChecker checker = new InjuryChecker();
+        checker.setKey("ADD API KEY");
         checker.setUrl("http://api.espn.com/v1/sports/basketball/nba/athletes?apikey=");
         for (int offset = 1; offset < 650; offset = offset + 50) {
             try {
                 final JsonArray athletes = checker.getAthletes(offset);
                 for (final JsonElement athlete : athletes) {
-                    if(athlete.getAsJsonObject().get("fullName").equals("Wilson Chandler")){
-                        idMap.put(athlete.getAsJsonObject().get("fullName").toString(),
-                                athlete.getAsJsonObject().get("id").toString());
+                        idMap.put(athlete.getAsJsonObject().get("fullName").getAsString(),
+                                athlete.getAsJsonObject().get("injuryStatus").getAsString());
                     }
-                }
+
             } catch (Exception e) {
             }
         }

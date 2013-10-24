@@ -11,15 +11,11 @@ import java.io.InputStreamReader;
 import com.google.gson.*;
 
 public class InjuryChecker {
-    private String firstName;
-    private String lastName;
     private boolean injuryFlag;
     private static String APIURL = null;
     private static String APIKEY = null;
 
-    public InjuryChecker(String firstName,String lastName){
-        this.firstName = firstName;
-        this.lastName = lastName;
+    public InjuryChecker(){
     }
 
     public void setKey(String key){
@@ -30,6 +26,13 @@ public class InjuryChecker {
     public void setUrl(String url){
         APIURL = url;
 
+    }
+
+    public JsonObject getSpeceficAthlete()
+            throws Exception {
+        final String json = connectToAPI(APIURL + APIKEY);
+        final JsonObject object = new JsonParser().parse(json).getAsJsonObject();
+        return object;
     }
 
 
